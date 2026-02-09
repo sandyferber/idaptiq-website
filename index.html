@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <title>Idaptiq</title>
 
+  <!-- Makes mobile devices display correctly -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #ffffff;
     }
 
     .container {
@@ -20,11 +22,11 @@
       align-items: center;
       text-align: center;
       padding: 20px;
+      box-sizing: border-box;
     }
 
     .logo {
-      width: 700px;
-      max-width: 100%;
+      max-width: 90%; /* responsive for small screens */
       height: auto;
       margin-bottom: 40px;
     }
@@ -52,10 +54,28 @@
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
+      transition: opacity 0.2s ease;
     }
 
     .login-button:hover {
       opacity: 0.9;
+    }
+
+    /* Make text links inherit gradient on mobile */
+    .brand-text a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Optional: smaller padding on very small screens */
+    @media (max-width: 400px) {
+      .login-button {
+        padding: 10px 24px;
+        font-size: 16px;
+      }
+      .brand-text {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
